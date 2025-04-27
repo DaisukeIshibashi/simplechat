@@ -122,6 +122,9 @@ def lambda_handler(event, context):
             })
         }
         
+        # ユーザーメッセージを追加、アシスタントの応答を会話履歴をprint
+        print("Message history:", messages)
+        
     except Exception as error:
         print("Error:", str(error))
         
