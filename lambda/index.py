@@ -105,6 +105,9 @@ def lambda_handler(event, context):
             "role": "assistant",
             "content": assistant_response
         })
+
+        # ユーザーメッセージを追加、アシスタントの応答を会話履歴をprint
+        print("Message history:", "messages")
         
         # 成功レスポンスの返却
         return {
@@ -121,10 +124,7 @@ def lambda_handler(event, context):
                 "conversationHistory": messages
             })
         }
-
-        # ユーザーメッセージを追加、アシスタントの応答を会話履歴をprint
-        print("Message history:", "messages")
-        
+       
     except Exception as error:
         print("Error:", str(error))
         
